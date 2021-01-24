@@ -8,13 +8,13 @@ import Header from './Header';
 
 export class MainPage extends Component {
   componentDidMount() {
-    this.props.onRequestRobots();
+    this.props.onRequestMonsters();
   }
 
-  filterRobots = () => {
-    const { robots, searchField } = this.props;
-    return robots.filter(robot => {
-      return robot.name.toLowerCase().includes(searchField.toLowerCase());
+  filterMonsters = () => {
+    const { monsters, searchField } = this.props;
+    return monsters.filter(monster => {
+      return monster.name.toLowerCase().includes(searchField.toLowerCase());
     });
   };
 
@@ -30,7 +30,7 @@ export class MainPage extends Component {
             <h1>Loading</h1>
           ) : (
             <ErrorBoundry>
-              <CardList robots={this.filterRobots()} />
+              <CardList monsters={this.filterMonsters()} />
             </ErrorBoundry>
           )}
         </Scroll>

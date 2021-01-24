@@ -7,8 +7,8 @@ let wrapper;
 
 beforeEach(() => {
   const mockProps = {
-    onRequestRobots: jest.fn(),
-    robots: [],
+    onRequestMonsters: jest.fn(),
+    monsters: [],
     searchField: '',
     isPending: false,
   };
@@ -19,19 +19,19 @@ it('renders without crashing', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
-it('fileters Robots', () => {
+it('fileters monsters', () => {
   const mockProps = {
-    onRequestRobots: jest.fn(),
-    robots: [],
+    onRequestMonsters: jest.fn(),
+    monsters: [],
     searchField: 'a',
     isPending: false,
   };
   wrapper = shallow(<MainPage {...mockProps} />);
-  expect(wrapper.instance().filterRobots()).toEqual([]);
+  expect(wrapper.instance().filterMonsters()).toEqual([]);
 });
 
-it('fileters Robots correctly', () => {
-  const filteredRobots = [
+it('fileters Monsters correctly', () => {
+  const filteredMonsters = [
     {
       id: 1,
       name: 'Leanne Graham',
@@ -40,8 +40,8 @@ it('fileters Robots correctly', () => {
     },
   ];
   const mockProps = {
-    onRequestRobots: jest.fn(),
-    robots: [
+    onRequestMonsters: jest.fn(),
+    monsters: [
       {
         id: 1,
         name: 'Leanne Graham',
@@ -53,11 +53,11 @@ it('fileters Robots correctly', () => {
     isPending: false,
   };
   wrapper = shallow(<MainPage {...mockProps} />);
-  expect(wrapper.instance().filterRobots()).toEqual(filteredRobots);
+  expect(wrapper.instance().filterMonsters()).toEqual(filteredMonsterss);
 });
 
-it('fileters Robots correctly 2', () => {
-  const filteredRobots = [
+it('fileters Monsters correctly 2', () => {
+  const filteredMonsters = [
     {
       id: 1,
       name: 'Leanne Graham',
@@ -66,8 +66,8 @@ it('fileters Robots correctly 2', () => {
     },
   ];
   const mockProps = {
-    onRequestRobots: jest.fn(),
-    robots: [
+    onRequestMonsters: jest.fn(),
+    monsters: [
       {
         id: 1,
         name: 'Leanne Graham',
@@ -79,5 +79,5 @@ it('fileters Robots correctly 2', () => {
     isPending: false,
   };
   wrapper = shallow(<MainPage {...mockProps} />);
-  expect(wrapper.instance().filterRobots()).toEqual([]);
+  expect(wrapper.instance().filterMonsters()).toEqual([]);
 });

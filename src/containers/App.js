@@ -9,7 +9,7 @@ import './App.css';
 const mapStateToProps = state => {
   return {
     searchField: state.searchMonsters.searchField,
-    monsters: state.requestMonsters.robots,
+    monsters: state.requestMonsters.monsters,
     isPending: state.requestMonsters.isPending,
   };
 };
