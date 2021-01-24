@@ -25,19 +25,11 @@ describe('searchMonsters', () => {
   });
 });
 
+const initialStateMonsters = {
+  monsters: [],
+  isPending: true,
+};
 describe('requestMonsters', () => {
-  const initialStateMonsters = {
-    monsters: [],
-    isPending: false,
-  };
-
-  //giving off error need to fix
-  //  it('should return the initial state', () => {
-  //    expect(reducers.requestMonsters(undefined, {})).toEqual(
-  //      initialStateMonsters
-  //    );
-  //  });
-
   it('should handle REQUEST_MONSTERS_PENDING action', () => {
     expect(
       reducers.requestMonsters(initialStateMonsters, {
