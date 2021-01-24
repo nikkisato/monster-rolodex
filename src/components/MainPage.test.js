@@ -53,7 +53,7 @@ it('fileters Monsters correctly', () => {
     isPending: false,
   };
   wrapper = shallow(<MainPage {...mockProps} />);
-  expect(wrapper.instance().filterMonsters()).toEqual(filteredMonsterss);
+  expect(wrapper.instance().filterMonsters()).toEqual(filteredMonsters);
 });
 
 it('fileters Monsters correctly 2', () => {
