@@ -8,6 +8,7 @@ import thunkMiddleware from 'redux-thunk';
 import App from './containers/App';
 import { searchMonsters, requestMonsters } from './reducers';
 import registerServiceWorker from './registerServiceWorker';
+import 'tachyons';
 
 const rootReducer = combineReducers({ searchMonsters, requestMonsters });
 const logger = createLogger();
