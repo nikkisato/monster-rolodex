@@ -8,5 +8,5 @@ it('expects to render App Component', () => {
     searchField: '',
   };
 
-  expect(shallow(<App store={mockStore} />)).toMatchSnapshot;
+  expect(shallow(<App store={mockStore} />)).toMatchSnapshot();
 });
